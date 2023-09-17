@@ -50,9 +50,9 @@ void main() {
       expect(data, isA<String>());
     });
     test('Must return a UserModel object.', () {
-      final userModel = UserModel.fromJson(jsonEncode(data));
+      final model = UserModel.fromJson(jsonEncode(data));
 
-      expect(userModel, isA<UserModel>());
+      expect(model, isA<UserModel>());
     });
   });
 }

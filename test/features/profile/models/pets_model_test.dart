@@ -21,9 +21,9 @@ void main() {
     });
 
     test('Must return a PetsModel object.', () {
-      var petsModel = PetsModel.fromJson(jsonEncode(data));
+      var model = PetsModel.fromJson(jsonEncode(data));
 
-      expect(petsModel, isA<PetsModel>());
+      expect(model, isA<PetsModel>());
     });
   });
 }
