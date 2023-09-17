@@ -1,6 +1,6 @@
 import 'package:flutter_modular/flutter_modular.dart';
 
-import 'view/profile_page.dart';
+import 'views/profile_page.dart';
 
 class ProfileModule extends Module {
   @override
