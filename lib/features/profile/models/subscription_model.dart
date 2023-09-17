@@ -19,7 +19,7 @@ class SubscriptionModel {
     this.subscriptionType,
   });
 
-  Map<String, dynamic> _toMap() {
+  Map<String, dynamic> toMap() {
     var data = <String, dynamic>{};
     data['userType'] = userType;
     data['createdAt'] = createdAt;
@@ -31,7 +31,7 @@ class SubscriptionModel {
     return data;
   }
 
-  factory SubscriptionModel._fromMap(Map<String, dynamic> map) {
+  factory SubscriptionModel.fromMap(Map<String, dynamic> map) {
     return SubscriptionModel(
       userType: map['userType'],
       createdAt: map['createdAt'],
@@ -43,9 +43,9 @@ class SubscriptionModel {
     );
   }
 
-  String toJson() => jsonEncode(_toMap());
+  String toJson() => jsonEncode(toMap());
 
   factory SubscriptionModel.fromJson(String json) {
-    return SubscriptionModel._fromMap(jsonDecode(json));
+    return SubscriptionModel.fromMap(jsonDecode(json));
   }
 }

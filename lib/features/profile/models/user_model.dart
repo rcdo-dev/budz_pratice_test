@@ -37,7 +37,7 @@ class UserModel {
     this.password,
   });
 
-  Map<String, dynamic> _toMap() {
+  Map<String, dynamic> toMap() {
     var data = <String, dynamic>{};
     data['email'] = email;
     data['generalPetID'] = generalPetID;
@@ -58,7 +58,7 @@ class UserModel {
     return data;
   }
 
-  factory UserModel._fromMap(Map<String, dynamic> map) {
+  factory UserModel.fromMap(Map<String, dynamic> map) {
     return UserModel(
       email: map['email'],
       generalPetID: map['generalPetID'],
@@ -79,9 +79,9 @@ class UserModel {
     );
   }
 
-  String toJson() => jsonEncode(_toMap());
+  String toJson() => jsonEncode(toMap());
 
   factory UserModel.fromJson(String json) {
-    return UserModel._fromMap(jsonDecode(json));
+    return UserModel.fromMap(jsonDecode(json));
   }
 }
