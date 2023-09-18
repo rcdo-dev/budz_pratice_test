@@ -21,4 +21,10 @@ class BudzTextStyles {
     fontWeight: FontWeight.w400,
     color: BudzColors.dark,
   );
+
+  static final bodyDefaultError = GoogleFonts.outfit(
+    fontSize: BudzSize.S,
+    fontWeight: FontWeight.w700,
+    color: BudzColors.errorMedium,
+  );
 }

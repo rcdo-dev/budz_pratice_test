@@ -10,6 +10,6 @@ class ProfileBloc extends Bloc<ProfileEvents, ProfileState>{
   final repository = Modular.get<ProfileRepository>();
 
   ProfileBloc():super(ProfileInitialState()){
-    on<LoadClientEvent>((event, emit) async => emit(ProfileLoaded(client: await repository.getClient())));
+    on<LoadProfileEvent>((event, emit) async => emit(ProfileLoaded(client: await repository.getClient())));
   }
 }
