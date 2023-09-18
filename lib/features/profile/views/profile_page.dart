@@ -6,7 +6,9 @@ import '../bloc/profile_bloc.dart';
 import '../bloc/profile_events.dart';
 import '../bloc/profile_state.dart';
 import '../widgets/custom_app_bar.dart';
+import '../widgets/custom_tab_bar.dart';
 import '../widgets/short_profile.dart';
+import '../../shared/themes/budz_colors.dart';
 import '../../shared/themes/budz_text_styles.dart';
 
 class ProfilePage extends StatefulWidget {
@@ -45,7 +47,7 @@ class _ProfilePageState extends State<ProfilePage> {
         } else if (state is ProfileLoaded) {
           final client = state.client;
           return Scaffold(
-            backgroundColor: Colors.grey[300],
+            backgroundColor: BudzColors.greyLighten,
             appBar: CustomAppBar(
               sizeValue: Size(
                 size.width,
@@ -61,6 +63,9 @@ class _ProfilePageState extends State<ProfilePage> {
               child: Text(
                 'Profile Page',
               ),
+            ),
+            bottomNavigationBar: CustomTabBar(
+              height: size.height / 7.5,
             ),
           );
         }
