@@ -13,7 +13,7 @@ void main() {
   ProfileRepository repository = ProfileRepository(service: service);
 
   test('Must return a ClientModel object.', () async {
-    var client = await repository.getUser();
+    var client = await repository.getClient();
 
     expect(client, isA<ClientModel>());
   });

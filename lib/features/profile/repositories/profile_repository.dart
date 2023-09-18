@@ -8,7 +8,7 @@ class ProfileRepository {
     required this.service,
   });
 
-  Future<ClientModel?> getUser() async {
+  Future<ClientModel?> getClient() async {
     var response = await service.get();
     if (response != null) {
       return response;
