@@ -6,6 +6,7 @@ import '../bloc/profile_bloc.dart';
 import '../bloc/profile_events.dart';
 import '../bloc/profile_state.dart';
 import '../widgets/custom_app_bar.dart';
+import '../widgets/custom_elevated_button.dart';
 import '../widgets/custom_tab_bar.dart';
 import '../widgets/short_profile.dart';
 import '../../shared/themes/budz_colors.dart';
@@ -59,9 +60,12 @@ class _ProfilePageState extends State<ProfilePage> {
                 nameInitials: client.user!.fullname.toString().substring(0, 1),
               ),
             ),
-            body: const Center(
-              child: Text(
-                'Profile Page',
+            body: Center(
+              child: CustomElevatedButton(
+                onPressed: () {},
+                width: size.width / 1.09,
+                height: size.height / 13,
+                label: 'Sair',
               ),
             ),
             bottomNavigationBar: CustomTabBar(
