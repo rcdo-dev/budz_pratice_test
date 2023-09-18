@@ -1,7 +1,8 @@
-import 'package:budz_pratice_test/features/shared/themes/budz_colors.dart';
-import 'package:budz_pratice_test/features/shared/themes/budz_size.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+
+import '../../shared/themes/budz_colors.dart';
+import '../../shared/themes/budz_size.dart';
 
 class CustomAppBar extends StatefulWidget implements PreferredSizeWidget {
   final Size sizeValue;

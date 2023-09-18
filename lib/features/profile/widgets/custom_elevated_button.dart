@@ -8,6 +8,11 @@ class CustomElevatedButton extends StatelessWidget {
   final double width;
   final double height;
   final String label;
+  final IconData? icon;
+  final Radius bottomLeft;
+  final Radius bottomRight;
+  final Radius topLeft;
+  final Radius topRight;
 
   const CustomElevatedButton({
     super.key,
@@ -15,6 +20,11 @@ class CustomElevatedButton extends StatelessWidget {
     required this.width,
     required this.height,
     required this.label,
+    this.icon,
+    this.bottomLeft = const Radius.circular(16.0),
+    this.bottomRight = const Radius.circular(16.0),
+    this.topLeft = const Radius.circular(16.0),
+    this.topRight = const Radius.circular(16.0),
   });
 
   @override
@@ -28,7 +38,12 @@ class CustomElevatedButton extends StatelessWidget {
             color: BudzColors.light,
             strokeAlign: 1,
           ),
-          borderRadius: BorderRadius.circular(16.0),
+          borderRadius: BorderRadius.only(
+            bottomLeft: bottomLeft,
+            bottomRight: bottomRight,
+            topLeft: topLeft,
+            topRight: topRight,
+          ),
         ),
         backgroundColor: BudzColors.pureWhite,
       ),
@@ -38,8 +53,8 @@ class CustomElevatedButton extends StatelessWidget {
             child: SizedBox(
               child: Row(
                 children: <Widget>[
-                  const Icon(
-                    Icons.logout_outlined,
+                  Icon(
+                    icon,
                     color: BudzColors.dark,
                   ),
                   const SizedBox(

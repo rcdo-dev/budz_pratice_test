@@ -1,7 +1,8 @@
-import 'package:budz_pratice_test/features/shared/themes/budz_colors.dart';
-import 'package:budz_pratice_test/features/shared/themes/budz_size.dart';
-import 'package:budz_pratice_test/features/shared/themes/budz_text_styles.dart';
 import 'package:flutter/material.dart';
+
+import '../../shared/themes/budz_colors.dart';
+import '../../shared/themes/budz_size.dart';
+import '../../shared/themes/budz_text_styles.dart';
 
 class ShortProfile extends StatefulWidget {
   final String nameInitials;

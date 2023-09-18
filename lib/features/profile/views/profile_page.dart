@@ -60,12 +60,91 @@ class _ProfilePageState extends State<ProfilePage> {
                 nameInitials: client.user!.fullname.toString().substring(0, 1),
               ),
             ),
-            body: Center(
-              child: CustomElevatedButton(
-                onPressed: () {},
-                width: size.width / 1.09,
-                height: size.height / 13,
-                label: 'Sair',
+            body: SizedBox(
+              child: Center(
+                child: Column(
+                  children: <Widget>[
+                    SizedBox(
+                      height: size.height / 26,
+                    ),
+                    Column(
+                      children: <Widget>[
+                        CustomElevatedButton(
+                          onPressed: () {},
+                          width: size.width / 1.09,
+                          height: size.height / 13,
+                          bottomLeft: const Radius.circular(0.0),
+                          bottomRight: const Radius.circular(0.0),
+                          topLeft: const Radius.circular(16.0),
+                          topRight: const Radius.circular(16.0),
+                          label: 'Meus Pets',
+                          icon: Icons.pets_outlined,
+                        ),
+                        CustomElevatedButton(
+                          onPressed: () {},
+                          width: size.width / 1.09,
+                          height: size.height / 13,
+                          bottomLeft: const Radius.circular(0.0),
+                          bottomRight: const Radius.circular(0.0),
+                          topLeft: const Radius.circular(0.0),
+                          topRight: const Radius.circular(0.0),
+                          label: 'Editar Perfil',
+                          icon: Icons.person,
+                        ),
+                        CustomElevatedButton(
+                          onPressed: () {},
+                          width: size.width / 1.09,
+                          height: size.height / 13,
+                          bottomLeft: const Radius.circular(0.0),
+                          bottomRight: const Radius.circular(0.0),
+                          topLeft: const Radius.circular(0.0),
+                          topRight: const Radius.circular(0.0),
+                          label: 'Ferramentas',
+                          icon: Icons.settings,
+                        ),
+                        CustomElevatedButton(
+                          onPressed: () {},
+                          width: size.width / 1.09,
+                          height: size.height / 13,
+                          bottomLeft: const Radius.circular(0.0),
+                          bottomRight: const Radius.circular(0.0),
+                          topLeft: const Radius.circular(0.0),
+                          topRight: const Radius.circular(0.0),
+                          label: 'Gerenciar Assinatura',
+                          icon: Icons.assessment,
+                        ),
+                        CustomElevatedButton(
+                          onPressed: () {},
+                          width: size.width / 1.09,
+                          height: size.height / 13,
+                          bottomLeft: const Radius.circular(16.0),
+                          bottomRight: const Radius.circular(16.0),
+                          topLeft: const Radius.circular(0.0),
+                          topRight: const Radius.circular(0.0),
+                          label: 'Alterar Senha',
+                          icon: Icons.lock_outline,
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: size.height / 28,
+                    ),
+                    CustomElevatedButton(
+                      onPressed: () {},
+                      width: size.width / 1.09,
+                      height: size.height / 13,
+                      label: 'Sair',
+                      icon: Icons.logout_outlined,
+                    ),
+                    SizedBox(
+                      height: size.height / 11,
+                    ),
+                    Text(
+                      'Versão 1.0.1',
+                      style: BudzTextStyles.bodyDefaultSmall,
+                    ),
+                  ],
+                ),
               ),
             ),
             bottomNavigationBar: CustomTabBar(
